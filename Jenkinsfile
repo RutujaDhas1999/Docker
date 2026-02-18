@@ -16,7 +16,7 @@ stages {
                 sh '''
                 docker rm -f Q1 || true
                 docker run -d -p 80:80 --name Q1 httpd
-                docker cp q2/index.html Q2:/usr/local/apache2/htdocs/
+                docker cp index.html Q2:/usr/local/apache2/htdocs/
 
                 '''
             }
